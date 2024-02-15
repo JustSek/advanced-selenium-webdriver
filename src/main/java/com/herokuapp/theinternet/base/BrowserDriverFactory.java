@@ -26,25 +26,20 @@ public class BrowserDriverFactory {
 	public WebDriver createDriver() {
 		// Create driver
 		log.info("Create driver: " + browser);
-		FirefoxOptions options = new FirefoxOptions();
-
 
 		switch (browser) {
-		case "chrome":
-			System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
-			driver.set(new ChromeDriver());
-			break;
+			case "chrome":
+				driver.set(new ChromeDriver());
+				break;
 
-		case "firefox":
-			System.setProperty("webdriver.gecko.driver", "src/main/resources/geckodriver.exe");
-			driver.set(new FirefoxDriver(options.configureFromEnv().setBinary("C:\\Program Files\\Mozilla Firefox\\firefox.exe")));
-			break;
+			case "firefox":
+				driver.set(new FirefoxDriver());
+				break;
 
-		default:
-			System.out.println("Do not know how to start: " + browser + ", starting chrome.");
-			System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
-			driver.set(new ChromeDriver());
-			break;
+			default:
+				System.out.println("Do not know how to start: " + browser + ", starting chrome.");
+				driver.set(new ChromeDriver());
+				break;
 		}
 
 		return driver.get();
@@ -67,7 +62,6 @@ public class BrowserDriverFactory {
 		ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
 
-		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
 		driver.set(new ChromeDriver(chromeOptions));
 		return driver.get();
 	}
