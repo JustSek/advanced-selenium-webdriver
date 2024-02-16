@@ -1,5 +1,0 @@
-[12564:4796:0718/081747.207:WARNING:chrome_main_delegate.cc(593)] This is Chrome version 114.0.5735.199 (not a warning)
-[12564:4796:0718/081747.288:INFO:chrome_browser_cloud_management_controller.cc(167)] Starting CBCM Controller Initialization
-[12564:4796:0718/081747.288:INFO:chrome_browser_cloud_management_controller.cc(195)] No machine level policy manager exists.
-[12564:4796:0718/081801.952:INFO:CONSOLE(0)] "[DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o", source: http://the-internet.herokuapp.com/login (0)
-[12564:4796:0718/081803.120:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
